@@ -5,4 +5,6 @@ package csci490.listviewdemo;
  */
 
 public class Course {
+
+    public void setCour
 }

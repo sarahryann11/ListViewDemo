@@ -25,9 +25,19 @@ public class MainActivity extends AppCompatActivity {
 
         Course couse;
         ArrayList<Course> courses = new ArrayList<>();
-        String[] classes = {"CSCI 340", "CSCI 360", "CSCI 320", "DANC 150", "DATA 101"};
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, classes);
+        course = new Course();
+        courses.setCourseName("Programming I");
+        courses.setCourseNumber("220");
+        courses.setProfessor("Dr.Alexander");
+        courses.add(course);
+
+        //String[] classes = {"CSCI 340", "CSCI 360", "CSCI 320", "DANC 150", "DATA 101"};
+
+        //ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, classes);
+        //listView.setAdapter(adapter);
+
+        CourseAdapter adapter = new CourseAdapter(this, courses);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
