@@ -18,22 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = (ListView) findViewById(R.id.class_schedule);
+        listView = findViewById(R.id.class_schedule);
 
-        Course course;
-        ArrayList<Course> courses = new ArrayList<>();
-
-        course = new Course();
-        courses.setCourseName("Database Concepts");
-        courses.setCourseNumber("332");
-        courses.setProfessor("Dr.Olmsted");
-        courses.add(course);
-
-        course = new Course();
-        courses.setCourseName("Capstone");
-        courses.setCourseNumber("462");
-        courses.setProfessor("Dr.Anderson");
-        courses.add(course);
+        ArrayList<Course> courses = populateData();
 
         //String[] classes = {"CSCI 340", "CSCI 360", "CSCI 320", "DANC 150", "DATA 101"};
 
@@ -58,4 +45,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public ArrayList<Course> populateData(){
+        Course course;
+        ArrayList<Course> courses = new ArrayList<>();
+
+        course = new Course();
+        course.setCourseName("Database Concepts");
+        course.setCourseNumber("332");
+        course.setProfessor("Dr. Olmsted");
+        courses.add(course);
+
+        course = new Course();
+        course.setCourseName("Capstone");
+        course.setCourseNumber("462");
+        course.setProfessor("Dr. Anderson");
+        courses.add(course);
+
+        return courses;
+    }
+
 }
