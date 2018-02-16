@@ -1,16 +1,13 @@
 package csci490.listviewdemo;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,13 +20,19 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.class_schedule);
 
-        Course couse;
+        Course course;
         ArrayList<Course> courses = new ArrayList<>();
 
         course = new Course();
-        courses.setCourseName("Programming I");
-        courses.setCourseNumber("220");
-        courses.setProfessor("Dr.Alexander");
+        courses.setCourseName("Database Concepts");
+        courses.setCourseNumber("332");
+        courses.setProfessor("Dr.Olmsted");
+        courses.add(course);
+
+        course = new Course();
+        courses.setCourseName("Capstone");
+        courses.setCourseNumber("462");
+        courses.setProfessor("Dr.Anderson");
         courses.add(course);
 
         //String[] classes = {"CSCI 340", "CSCI 360", "CSCI 320", "DANC 150", "DATA 101"};
